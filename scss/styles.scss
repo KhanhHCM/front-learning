@@ -1,14 +1,204 @@
-.test {
-  appearance: normal;
+@import "config";
+
+* {
   box-sizing: border-box;
-  display: flexbox;
-  margin: 0 auto;
-  font-size: 1.8rem;
-  width: 320px;
-  line-height: 1.3;
-  
-  &__title {
-    font-size: 2.4rem;
-    font-weight: bold;
+}
+
+.header {
+  padding: 0px 0px;
+  margin : 20px 60px;
+  display: flex;
+  &-logo {
+    float: left;
+
+    img {
+      height: 100px;
+    }
+  }
+
+  &-nav {
+
+    .navi-items {
+      color: $font-color;
+      font-size: medium;
+      list-style-type: none;
+      display: flex;
+      float: left;
+      padding: 40px 20px;
+
+      &:hover {
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-profile {
+    float: center;
+    padding: 40px 40px;
+
+    img {
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+ 
+}
+
+.main {
+  margin: 50px 60px;
+
+  &-cover {
+    background: url('../images/cover.jpg') no-repeat center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px 0px;
+
+      .search-key {
+        margin: 40px 40px 0px 40px;
+        display: flex;
+
+        input[type=text]{
+          background-color: rgba(255, 255, 255, 0.0);
+          border: 1px solid $base-color;
+          border-right: none;
+          border-radius: 5px 0px 0px 5px;
+          font-size: 24px;
+          height: fit-content;
+          padding: 10px;
+          outline: none;
+          color: $font-color;
+
+          &:focus {
+            color: $base-color
+          }
+        }
+
+        button {
+          background-color: $base-color;
+          font-size: x-large;
+          color: white;
+          border: 1px solid $base-color;
+          border-radius: 0px 5px 5px 0px;
+          border-left: none;
+        }
+      }
+
+      .search-select {
+        display: flex;
+        float: left;
+        
+        ul {
+          list-style-type: none;
+          display: flex;
+          text-align: center;
+          font-weight: bold;
+          white-space: nowrap;
+
+          li {
+            margin-right: 6%;
+
+            &::after {
+              content: '\f078';
+              font-family: FontAwesome;
+              font-weight: normal;
+              margin:0px 5px;
+              text-decoration: none;
+              color: $base-color;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-products {
+    
+    .main-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: x-large;
+      padding: 15px 0px;
+      border-bottom: 3px solid $base-color;
+      margin: 20px 0px;
+      width: 10%;
+      white-space: nowrap;
+    }
+
+    .list-products{
+      .product {
+        background-color: rgba(128, 128, 128, 0.1);
+
+        .image{
+          position: relative;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+          .price {
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            padding: 3px 15px;
+            background-color: $base-color;
+            color: white;
+            font-weight: bold;
+          }
+        }
+
+        &-content {
+          padding: 5px 10px;
+          
+          .title {
+            color: $font-color;
+            font-weight: bold;
+
+            span {
+              color: $base-color;
+              float: right;
+              font-weight: normal;
+            }
+          }
+
+          .decs {
+            font-size: small;
+            color: $font-color;
+          }
+
+          ul {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            display: flex;
+            white-space: nowrap;
+            color: $font-color;
+
+            li {
+              width: 33%;
+              text-align: center;
+
+              &:first-child {
+                text-align: left;
+              }
+              &:last-child{
+                text-align: right;
+              }
+
+              i{
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

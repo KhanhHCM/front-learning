@@ -3,10 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Title </title>
 </head>
 <body>
-  <header class="header-inner">vkl</header>
+  <header class="header">
+    <div class="header-logo col-2">
+      <img src="images/logo.png" alt="">
+    </div>
+    <nav class="header-nav col-9">
+      <ul class="nav-items">
+        <li class="navi-items">Giới thiệu</li>
+        <li class="navi-items">Tin tức thị trường</li>
+        <li class="navi-items">Nhà phố bán</li>
+        <li class="navi-items">Nhà phố cho thuê</li>
+        <li class="navi-items">Thủ tục pháp lý</li>
+        <li class="navi-items">Góc tư vấn</li>
+        <li class="navi-items">Liên hệ</li>
+      </ul>
+    </nav>
+    <div class="header-profile col-1">
+      <img src="images/avatar.png" alt="avatar">
+    </div>
+
+  </header>
+  <div class="main">
+    <section class="main-cover">
+      <div class="search-form col-8">
+        <div class="search-key">
+          <input type="text" class="col-10">
+          <button name="button" type="submit" value="" class="col-2">
+            <i class="fa fa-search"></i>
+          </button>  
+        </div> 
+        <div class="search-select col-10">
+          <ul class="col-12">
+            <li class="select-item">Nhu cầu</li>
+            <li class="select-item">Loại hình</li>
+            <li class="select-item">Quận</li>
+            <li class="select-item">Diện tích</li>
+            <li class="select-item">Mức giá</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-products">
+      <h1 class="main-title">Nhà phố bán</h1> 
+      <div class="list-products col-12">
+        <div class="product col-3">
+          <div class="image">
+            <img src="images/product.jpg" alt="">
+            <div class="price">10 tỷ</div>
+          </div>
+          <div class="product-content">
+            <div class="title">200m2 <span>Quận 1</span></div>
+            <p class="decs">Nhà mặt nồi Trần Dần, Quận 1, 100 phòng ngủ, gần Becgie</p>
+            <ul>
+              <li><i class="fa fa-bed" aria-hidden="true"></i>3</li>
+              <li><i class="fa fa-shower" aria-hidden="true"></i>3</li>
+              <li><i class="fa fa-location-arrow" aria-hidden="true"></i>Đ.Bắc</li>
+            </ul>
+          </div>
+        </div>
+      </div>  
+    </section>
+
+
   </div>
+  <footer class="footer"></footer>
 </body>
 </html>
