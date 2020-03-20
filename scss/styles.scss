@@ -1,5 +1,6 @@
 @import "config";
 
+
 * {
   box-sizing: border-box;
 }
@@ -118,87 +119,107 @@
     }
   }
 
-  &-products {
-    
-    .main-title {
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: x-large;
-      padding: 15px 0px;
-      border-bottom: 3px solid $base-color;
-      margin: 20px 0px;
-      width: 10%;
-      white-space: nowrap;
-    }
+  &-inner {
+    .main-products {
+      
+      .main-title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: x-large;
+        padding: 15px 0px;
+        border-bottom: 3px solid $base-color;
+        margin: 20px 0px;
+        width: 10%;
+        white-space: nowrap;
+      }
 
-    .list-products{
-      .product {
-        background-color: rgba(128, 128, 128, 0.1);
+      .list-products{
+        .product {
+          padding: 15px;
 
-        .image{
-          position: relative;
+          .image{
+            position: relative;
 
-          img {
-            max-width: 100%;
-            height: auto;
-          }
+            img {
+              max-width: 100%;
+              height: auto;
+            }
 
-          .price {
-            position: absolute;
-            bottom: 5px;
-            left: 0px;
-            padding: 3px 15px;
-            background-color: $base-color;
-            color: white;
-            font-weight: bold;
-          }
-        }
-
-        &-content {
-          padding: 5px 10px;
-          
-          .title {
-            color: $font-color;
-            font-weight: bold;
-
-            span {
-              color: $base-color;
-              float: right;
-              font-weight: normal;
+            .price {
+              position: absolute;
+              bottom: 5px;
+              left: 0px;
+              padding: 3px 15px;
+              background-color: $base-color;
+              color: white;
+              font-weight: bold;
             }
           }
 
-          .decs {
-            font-size: small;
-            color: $font-color;
-          }
+          &-content {
+            background-color: rgba(128, 128, 128, 0.1);
+            padding: 15px 10px;
+            
+            .title {
+              color: $font-color;
+              font-weight: bold;
 
-          ul {
-            margin: 0px;
-            padding: 0px;
-            list-style-type: none;
-            display: flex;
-            white-space: nowrap;
-            color: $font-color;
-
-            li {
-              width: 33%;
-              text-align: center;
-
-              &:first-child {
-                text-align: left;
+              span {
+                color: $base-color;
+                float: right;
+                font-weight: normal;
               }
-              &:last-child{
-                text-align: right;
-              }
+            }
 
-              i{
-                margin-right: 7px;
+            .decs {
+              font-size: small;
+              color: $font-color;
+            }
+
+            ul {
+              margin: 0px;
+              padding: 0px;
+              list-style-type: none;
+              display: flex;
+              white-space: nowrap;
+              color: $font-color;
+
+              li {
+                font-size: small;
+                width: 33%;
+                text-align: center;
+
+                &:first-child {
+                  text-align: left;
+                }
+                &:last-child{
+                  text-align: right;
+                }
+
+                i{
+                  margin-right: 7px;
+                }
               }
             }
           }
         }
       }
+
+      .main-cta {
+        display: flex; 
+        justify-content: center;
+
+        button {
+          margin: 20px 0px;
+          color: $base-color;
+          border: 1px solid $base-color;
+          border-radius: 5px;
+          font-size: x-large;
+          white-space: nowrap;
+          padding: 5px 15px;
+        }
+      }
     }
   }
+
 }
